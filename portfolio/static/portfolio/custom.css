@@ -1,0 +1,88 @@
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+
+  body {
+    background: #fafafa;
+    color: #333333;
+  }
+  
+  #aboutme {
+    text-align: center;
+    font-family: 'PT Mono', monospace;
+    padding-bottom: 0.5em;
+  }
+
+  #end {
+    text-align: center;
+  }
+
+  #row {
+    text-align: center;
+  }
+  
+  .img-thumbnail{
+    border: solid black;
+    border-radius: 50%;
+    width:150px;
+    align-self: center;
+  }
+  
+  .profile_annie{
+    text-align:center;
+    padding-bottom: 1.5em;
+  }
+  
+  .text-body{
+    font-family: 'Asap', sans-serif;
+    font-size: 1.5em;
+    padding-bottom: 2em;
+    float: left;
+  }
+  
+  /* project cards on projects page */
+  #project-cards{
+    padding-bottom: 1.5em;
+  }
+  
+  .btn btn-social-icon{
+    text-align: right;
+  }
+  
+  
+  html, body {
+    height: 95%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+

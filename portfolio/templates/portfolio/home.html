@@ -1,0 +1,76 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <!-- about me -->
+    <div class="col-12">
+    
+      <h1 id="aboutme">                  About Annie Zhang</h1>
+      <div class="container profile_annie">
+        <img src="{% static 'portfolio/annie2.jpg' %}" alt="Annie" class="img-thumbnail">
+      </div>
+      <div class="text-body">
+        <p>Annie Zhang is an aspring full stack Software Engineer based in bay area, California.
+          She was the data analyst in Giving Day Team of Communities Foundations of Texas since May, 2019. She quit her job in Jun. 
+          2021 to pursue her passion in coding and backend engineering. She has extensive knowledge of Python, Java, SQL, html, CSS, 
+          Javascript, Django and so on. She loves learning new knowledge and is a quick-learner. Please feel free to check 
+          her <a href="{% static 'portfolio/resume' %}">resume</a>, or email her
+          at <span class="email"><a href="mailto:gezhang84@gmail.com">gezhang84@gmail.com</a></span> for any questions or potential 
+          position fit for her.</p>
+      </div>
+    </div>
+<!-- tech projects -->
+<div class="col-12">
+  <h1 id="aboutme">Tech Projects</h1>
+<!-- Row 1 -->
+<div class="row row-cols-1 row-cols-md-3 g-4" id="project-cards">
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'portfolio/password15.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Password Generator</h5>
+        <p class="card-text">This website provides users a platform to generate password with given length and other criterias, such as whether
+          the passwords contain upper case letters, numbers or special characters.</p>
+        <a href="https://www.themocksite.com" class="btn btn-primary">View project</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'portfolio/stock2.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Stock Tracker</h5>
+        <p class="card-text">This web app allows users to check a selected stock's performance over the past a few days.
+          And it calculates the best time to buy and sell the stock as well as the maximum profit per share.</p>
+        <a href="https://www.google.com" class="btn btn-primary">View project</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'portfolio/blog4.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Personal Blog</h5>
+        <p class="card-text">This app gives users the ultimate flexibility to create their own games.
+          If the input is not valid, an error would show on the click of the solve button.
+          Otherwise, the solve button would solve/complete the puzzle.</p>
+        <a href="{% url 'blog:all_blogs' %}" class="btn btn-primary">View project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-12">
+  <h7 id="aboutme">This website is built on Django © Annie Zhang.</h7>
+
+
+
+{% endblock %}
+
