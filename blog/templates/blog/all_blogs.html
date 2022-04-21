@@ -1,12 +1,39 @@
-<h1>Annie's blog</h1>
-
-<h2>Annie has written {{blogs.count}} blog{{blogs.count|pluralize}}</h2>
-
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+<link href="{%static 'blog/main.css' %}" rel="stylesheet" />
+<h5>There are {{blogs.count}} blog{{blogs.count|pluralize}} available in this platform</h5>
 {%for blog in blogs %}
+<article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <small class="text-muted">{{ blog.date | date:"F d, Y" }}</small>
+      </div>
+      <h4><a class="article-title", href = "{%url 'blog:detail' blog.id %}" >{{ blog.title }}</a></h4>
+      <!-- <p class="article-content">{{ post.content }}</p> -->
+      <p>{{ blog.description|truncatechars:100 }}</p>
+    </div>
+  </article>
+  {% endfor %}
 
-<a href = "{%url 'blog:detail' blog.id %}"><h2>{{ blog.title}}</h2></a>
-<h5>{{blog.date|date:'M d Y'}}</h5>
-<p>{{blog.description|striptags|truncatechars:100}}
-</p>
+  {% if is_paginated %}
 
-{%endfor%}
+    {% if page_obj.has_previous %}
+      <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+      {% if page_obj.number == num %}
+        <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+      <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+  {% endif %}
+{% endblock content%}
