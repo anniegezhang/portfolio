@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'portfolio',
     'sudoku',
+    'password',
 ]
 
 MIDDLEWARE = [

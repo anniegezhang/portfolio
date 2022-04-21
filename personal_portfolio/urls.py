@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.home, name = 'home'),
     path('blog/', include('blog.urls')),
     path('sudoku/', include('sudoku.urls')),
- 
+    path('password/', include('password.urls')),
 
 ]
 

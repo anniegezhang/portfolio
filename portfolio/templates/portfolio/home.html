@@ -10,19 +10,17 @@
     </div>
     <!-- about me -->
     <div class="col-12">
-    
-      <h1 id="aboutme">                  About Annie Zhang</h1>
       <div class="container profile_annie">
+        <h1 id="aboutme">About Annie Zhang</h1>
         <img src="{% static 'portfolio/annie2.jpg' %}" alt="Annie" class="img-thumbnail">
       </div>
       <div class="text-body">
-        <p>Annie Zhang is an aspring full stack Software Engineer based in bay area, California.
-          She was the data analyst in Giving Day Team of Communities Foundations of Texas since May, 2019. She quit her job in Jun. 
-          2021 to pursue her passion in coding and backend engineering. She has extensive knowledge of Python, Java, SQL, html, CSS, 
-          Javascript, Django and so on. She loves learning new knowledge and is a quick-learner. Please feel free to check 
-          her <a href="{% static 'portfolio/resume' %}">resume</a>, or email her
+        <p>My journey to become a software engineer officially starts on Jun. 2021, when I quit my data analyst job 
+          in the North Texas Giving Day Team(NPO). I have great passion in this industry, and self-taught Python, Java, SQL, html, CSS, 
+          Javascript, Django and so on. Currently I'm based in the Bay area, California. Please feel free to check 
+          my <a href="{% static 'portfolio/resume' %}">resume</a>, or email my
           at <span class="email"><a href="mailto:gezhang84@gmail.com">gezhang84@gmail.com</a></span> for any questions or potential 
-          position fit for her.</p>
+          position.</p>
       </div>
     </div>
 <!-- tech projects -->
@@ -37,7 +35,7 @@
         <h5 class="card-title">Password Generator</h5>
         <p class="card-text">This website provides users a platform to generate password with given length and other criterias, such as whether
           the passwords contain upper case letters, numbers or special characters.</p>
-        <a href="https://www.themocksite.com" class="btn btn-primary">View project</a>
+        <a href="{% url 'password:home' %}" class="btn btn-primary">View project</a>
       </div>
     </div>
   </div>
