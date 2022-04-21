@@ -10,13 +10,14 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
+  <link rel="stylesheet" href="{% static 'portfolio/custom.css' %}">
 
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">
+  <link rel="icon" type="image/png" href="{% static 'portfolio/Logo.png' %}">
 
   <title>Annie Zhang</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'portfolio/Logo.png' %}">
   
 </head>
 
@@ -52,6 +53,12 @@
   <div class="container">
     {% block content %}{% endblock %}
   </div>
+      <!-- footer -->
+      <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+          <span class="text-muted">This website is built on Django &copy; Annie Zhang.</span>
+        </div>
+      </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -29,7 +29,7 @@
 <div class="col-12">
   <h1 id="aboutme">Tech Projects</h1>
 <!-- Row 1 -->
-<div class="row row-cols-1 row-cols-md-3 g-4" id="project-cards">
+<div class="row row-cols-1 row-cols-md-4 g-4" id="project-cards">
   <div class="col">
     <div class="card">
       <img src="{% static 'portfolio/password15.png' %}" class="card-img-top" alt="...">
@@ -47,7 +47,7 @@
       <div class="card-body">
         <h5 class="card-title">Stock Tracker</h5>
         <p class="card-text">This web app allows users to check a selected stock's performance over the past a few days.
-          And it calculates the best time to buy and sell the stock as well as the maximum profit per share.</p>
+          And it allow users to see the best time to buy and sell the stock as well as the maximum profit per share      . </p>
         <a href="https://www.google.com" class="btn btn-primary">View project</a>
       </div>
     </div>
@@ -57,18 +57,28 @@
       <img src="{% static 'portfolio/blog4.png' %}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Personal Blog</h5>
-        <p class="card-text">This app gives users the ultimate flexibility to create their own games.
-          If the input is not valid, an error would show on the click of the solve button.
-          Otherwise, the solve button would solve/complete the puzzle.</p>
+        <p class="card-text">This app aims to create a platform for users to write blogs. Planned features include 
+          logging into the platform, creating, deleting, editing blog entries. Those functions are yet to be developed.</p>
         <a href="{% url 'blog:all_blogs' %}" class="btn btn-primary">View project</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'portfolio/sudoku4.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <h5 class="card-title">Sudoku Game</h5>
+        <p class="card-text">This app simulate sudoku games so player could play it in this webpage.
+          Player could solve this game by select input using their mouse.
+          If the input is not valid, an error would show on the click of the solve button.
+          </p>
+        <a href="{% url 'sudoku:home' %}" class="btn btn-primary">View project</a>
       </div>
     </div>
   </div>
 </div>
 
-
-<div class="col-12">
-  <h7 id="aboutme">This website is built on Django © Annie Zhang.</h7>
 
 
 

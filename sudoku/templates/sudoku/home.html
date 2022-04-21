@@ -1,0 +1,54 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <a href="{% url 'sudoku:home' %}"><h1 class="header" align="center">Sudoku Game</h1></a>
+<div class="container" id="instructions">
+    <li>The game follows Sudoku Game rules.
+    <li>To start, place any number into the boxes.</li>
+    <li>Click the <strong>SOLVE</strong> to check if your answer is correct.</li>
+    <li>If you need to see the answer to the game, you need to clear all your input and then click <strong>SOLVE</strong>. </li>
+    <li>Click the "Sudoku game" on top of the page to start a new game.</li>
+</div>
+<div align="center">
+  <form method="POST" name="sudoku_form">
+    {% csrf_token %}
+    <table align="center">
+      {% if not sudoku %}
+      <tbody>
+      {% for i in range %}
+        <tr>
+          {% for j in range %}
+            <td>
+              <input class="sudokuinput" type="number" name="[{{ forloop.parentloop.counter0 }}][{{ forloop.counter0 }}]" value="" class="square" maxlength="1" size="1" min="1", max="9">
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+      {% else %}
+      <tbody>
+      {% for row in sudoku %}
+        <tr>
+          {% for col in row %}
+            <td>
+              <input class="sudokuinput" type="number" name="[{{ forloop.parentloop.counter0 }}][{{ forloop.counter0 }}]" value="{{ col }}" class="square" maxlength="1" size="1" min="1", max="9">
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+      {% endif %}
+    </table>
+    {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+    <div class="container" id="solverbutton"><button class="btn btn-dark" type="submit" name="button">Solve</button></div>
+  </form>
+  {% endblock %}
+</div>

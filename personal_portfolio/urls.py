@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'home'),
     path('blog/', include('blog.urls')),
-  
+    path('sudoku/', include('sudoku.urls')),
  
 
 ]
