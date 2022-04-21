@@ -4,14 +4,14 @@
 }
 
 #solverbutton {
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 table, tr, td{
-    border: 1px solid black;
+    border: 1px  black;
 }
 
 #instructions{
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
