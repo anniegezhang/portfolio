@@ -26,6 +26,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('sudoku/', include('sudoku.urls')),
     path('password/', include('password.urls')),
+    path('stock/', include('stock.urls')),
 
 ]
 

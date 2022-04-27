@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'portfolio',
     'sudoku',
     'password',
+    'stock',
 ]
 
 MIDDLEWARE = [
