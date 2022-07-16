@@ -9,6 +9,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from stock.stock_api_call import stock_api_call
 # from rest_framework import authentication, permissions
+import sys
+import requests
 
 # Create your views here.
 def home(request):

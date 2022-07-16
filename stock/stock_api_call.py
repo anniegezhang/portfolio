@@ -1,4 +1,5 @@
 from datetime import date, datetime, timedelta
+import sys
 import requests
 
 def stock_api_call(ticker):
@@ -20,20 +21,25 @@ def stock_api_call(ticker):
         # converting the datetime into UNIX
         for i in time_container:
             unix_container += [int(datetime.timestamp(i))]
+            #print(unix_container)
         # calling the API
-        for j in unix_container:
-            r = requests.get('https://finnhub.io/api/v1/stock/candle?symbol='+ticker+'&resolution=1&from='+str(j)+'&to='+str(j)+'&token=c9jhreqad3idg7p5c3kg')
+        n = len(unix_container)
+        for j in range(1,n):
+            r = requests.get('https://finnhub.io/api/v1/stock/candle?symbol='+ticker+'&resolution=1&from='+str(unix_container[j-1])+'&to='+str(unix_container[j])+'&token=cb85i2aad3i6lui0si00')      
             json_container += [r.json()]
+            #print(json_container)
+        # print(json_container,time_label)
         return json_container, time_label
 
     def stock_prices(ticker):
         dic = {}
         prices = []
         labels=[]
-        data = adding_5_days(ticker)
+        data = adding_5_days(ticker) 
         days = data[0]
         time_label = data[1]
         for l in days:
+            #print(l)
             try:
                 prices += [l["c"][0]]
                 v = time_label[days.index(l)]
@@ -81,8 +87,7 @@ def stock_api_call(ticker):
     results['sell_date'] = sell_date
     results['maxPri'] = maxPri_rounded
     results['prices'] = price
-    results['labels'] = labels
-        
+    results['labels'] = labels    
     return results
 
 if __name__ == '__main__':
