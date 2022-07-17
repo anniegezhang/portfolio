@@ -18,7 +18,7 @@
         <p>My journey to become a software engineer starts in 2021, when I quit my data analyst job 
           in the North Texas Giving Day Team(NPO). Before that I have learned python, data structure and algorithms in my spare time. I have great passion in coding and software engineering, and self-taught Python, Java, SQL, html, CSS, 
           Javascript, Django, Spring Boot, REST API, AWS and so on. Currently I'm based in the Bay area, California. Please feel free to check 
-          my <a href="{% static 'portfolio/resume' %}">resume</a>, or email me
+          my <a href="{% static 'portfolio/AZ-SDE.pdf' %}">resume</a>, or email me
           at <span class="email"><a href="mailto:gezhang84@gmail.com">gezhang84@gmail.com</a></span> for any questions or potential 
           position.</p>
       </div>
@@ -30,35 +30,24 @@
 <div class="row row-cols-1 row-cols-md-4 g-4" id="project-cards">
   <div class="col">
     <div class="card">
-      <img src="{% static 'portfolio/password15.png' %}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Password Generator</h5>
-        <p class="card-text">This website provides users a platform to generate password with given length and other criterias, such as whether
-          the passwords contain upper case letters, numbers or special characters.</p>
-        <a href="{% url 'password:home' %}" class="btn btn-primary">View project</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
       <img src="{% static 'portfolio/stock2.png' %}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Stock Tracker</h5>
         <p class="card-text">This web app allows users to check a selected stock's performance over the past few days.
-          And it allow users to see the best time to buy and sell the stock as well as the maximum profit per share      . </p>
+          And it allow users to see the best time to buy and sell the stock as well as the maximum profit per share. </p>
         <a href="{% url 'stock:home' %}" class="btn btn-primary">View project</a>
       </div>
     </div>
-  </div>
+  </div> 
   <div class="col">
     <div class="card">
-      <img src="{% static 'portfolio/ecommerce1.png' %}" class="card-img-top" alt="...">
+      <img src="{% static 'portfolio/playlist1.png' %}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Ecommerce Website</h5>
-        <p class="card-text">This ecommerce platform allows customers to browse products and place orders. 
-          Consumers can access the website through computer or mobile devices. The website will be built with JAVA on Spring Boot. </a>
-        </p>
-        <a class="btn btn-primary">To be added</a>
+        <p></p>
+        <h5 class="card-title">Playlist API</h5>
+        <p class="card-text">This RESTAPI enable users to create, retrieve, update and delete playlists, as well as add and delete songs. 
+          DynamoDB are utilized to store songs and lists. AWS lambda function realized the API CRUD operations.</p>
+        <a href="https://github.com/anniegezhang/playlist-API-with-AWS-lambda-and-DynamoDB" class="btn btn-primary">View project</a>
         </div>
     </div>
   </div>
@@ -66,8 +55,7 @@
     <div class="card">
       <p class="card-text"></p>
       <img src="{% static 'portfolio/sudoku4.png' %}" class="card-img-top" alt="...">
-      <div class="card-body">
-       
+      <div class="card-body">    
         <h5 class="card-title"></h5>
         <h5 class="card-title">Sudoku Game</h5>
         <p class="card-text">This app simulate sudoku games so player could play it in this webpage.
@@ -75,6 +63,17 @@
           If the input is not valid, an error would show on the click of the solve button.
           </p>
         <a href="{% url 'sudoku:home' %}" class="btn btn-primary">View project</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="{% static 'portfolio/password15.png' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Password Generator</h5>
+        <p class="card-text">This website provides users a platform to generate password with given length and other criterias including lower or upper case, special letters. The functions of password storage and management 
+          will be added.</p>
+        <a href="{% url 'password:home' %}" class="btn btn-primary">View project</a>
       </div>
     </div>
   </div>
